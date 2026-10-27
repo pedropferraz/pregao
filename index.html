@@ -69,6 +69,11 @@ a{color:var(--accent)}
 .stamp{font-family:var(--mono);font-size:12px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 14px}
 .pill{display:inline-block;font-family:var(--ui);font-size:12px;font-weight:600;padding:2px 8px;border-radius:999px;background:var(--warn-bg);color:var(--warn-ink)}
 
+.tabs{display:flex;gap:4px;font-family:var(--ui);font-size:14px;background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:3px;align-self:flex-start}
+.tabs a{text-decoration:none;color:var(--muted);padding:6px 12px;border-radius:999px;font-weight:600}
+.tabs a[aria-current="page"]{background:var(--ink);color:var(--bg)}
+.tabs .live{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--down);margin-right:6px;vertical-align:1px}
+.topnav{display:flex;justify-content:flex-end}
 /* lead */
 .lead{display:grid;gap:10px;max-width:820px}
 .lead .kicker{font-family:var(--ui);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-weight:700}
@@ -152,6 +157,7 @@ footer .srcs{font-size:12px}
 <body>
 
 <div class="wrap">
+  <nav class="topnav" aria-label="Seções"><div class="tabs"><a href="noticias.html"><span class="live" aria-hidden="true"></span>Ao vivo</a><a href="./" aria-current="page">Boletim do dia</a></div></nav>
   <header class="mast">
     <div class="brand">
       <span class="sub">Boletim diário · Brasil + Mundo</span>
